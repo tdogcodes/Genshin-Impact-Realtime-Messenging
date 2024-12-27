@@ -1,0 +1,165 @@
+.chat{
+    flex: 2;
+    border-left: 1px solid hsl(240, 13%, 45%);
+    border-right: 1px solid hsl(240, 13%, 45%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .top{
+        padding: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid hsl(240, 13%, 45%);
+
+        .user{
+            display: flex;
+            align-items: center;
+            gap: 2em;
+
+            img{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .texts{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+
+                span{
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+
+                p{
+                    font-size: 1rem;
+                    font-weight: 300;
+                    color: hsl(0, 0%, 79%);
+                }
+            }
+        }
+        .icons{
+            display: flex;
+            gap: 1em;
+
+            img{
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+
+            }
+        }
+    }
+    .center{
+        flex: 1;
+        padding: 2em;
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        scrollbar-width: none; /* For Firefox */
+        -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+
+        .message{
+            max-width: 70%;
+            display: flex;
+            flex-direction: column;
+
+            &.own{
+                align-self: flex-end;
+                
+                .texts{
+                    p{
+                       background-color: hsl(240, 100%, 33%); 
+                       padding: 1em;
+                       border-radius: 10px;
+                    }
+                }
+            }
+
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: .5em;
+            }
+            .texts{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                
+
+                img{
+                    width: 100%;
+                    height: 300px;
+                    border-radius: 10px;
+                    object-fit: cover;
+                }
+                p{
+                    padding: 1em;
+                    background-color: hsl(261, 100%, 30%);
+                    border-radius: 10px;
+                }
+                span{
+                    font-size: .8rem;
+                    color: hsl(0, 0%, 79%);
+                }
+            }
+        }
+    }
+    .bottom{
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid hsl(240, 13%, 45%);
+        gap: 1em;
+        margin-top: auto;
+
+        .icons{
+            display: flex;
+            gap: 1em;
+        }
+        img{
+            width: 20px;
+            height: 20px;
+            cursor : pointer;
+        }
+
+        input{
+            flex: 1;
+            background-color: hsla(240, 61%, 14%, 0.411);
+            border: none;
+            outline: none;
+            color: white;
+            border-radius: 10px;
+            padding: 1em;
+        }
+        .emoji{
+            position: relative;
+            .picker{
+                position: absolute;
+                bottom: 50px;
+                left: 0;
+            }
+        }
+
+        .sendButton{
+            padding: 1em;
+            border-radius: 10px;
+            color:white;
+            background-color: hsl(240, 100%, 33%);
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+.chat::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
