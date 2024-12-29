@@ -22,12 +22,14 @@
     }
     .icons{
         display: flex;
-        gap: 2em;
-        
+        gap: .5em;
         img {
-            width: 2em;
-            height: 2em;
-            cursor: pointer;
+                width: 40px;
+                height: 40px;
+                background-color: hsla(240, 61%, 14%, 0.411);
+                padding: 10px;
+                border-radius: 10px;
+                cursor: pointer;
         }
     }
 }

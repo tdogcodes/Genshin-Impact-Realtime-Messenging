@@ -6,7 +6,7 @@
     .search {
         display: flex;
         align-items: center;
-        gap: 2em;
+        gap: 1em;
         padding: 2em;
 
         .searchBar{
