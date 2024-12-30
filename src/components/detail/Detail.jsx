@@ -48,13 +48,6 @@ const Detail = () => {
               </div>
               <img src="./download.png" alt="download" className="icon"/>
             </div>
-            <div className="photoItem">
-              <div className="photoDetail">
-                <img src="./avatar.png" alt="photo" />
-                <span>Photo Title</span>
-              </div>
-              <img src="./download.png" alt="download" className="icon"/>
-            </div>
           </div>
         </div>
         <div className="option">
