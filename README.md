@@ -1,3 +1,2 @@
-# Lama Dev Chat App Starter template
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tdog's React Firebase Chat App!
+  An realtime messenger app with user authentication, video calling, a swipe algorithm.
