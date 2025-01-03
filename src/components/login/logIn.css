@@ -56,9 +56,13 @@
                 outline: none;
                 border-radius: 5px;
                 color: white;
-                background-color: hsla(240, 61%, 14%, 0.932);
+                background-color: hsla(240, 61%, 14%, 0.712);
                 cursor: pointer;
                 font-weight: 6 00;
+
+                &:hover{
+                    background-color: hsl(240, 61%, 14%);
+                }
             }
         }
     }
