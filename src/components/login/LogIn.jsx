@@ -1,7 +1,8 @@
 import { toast } from 'react-toastify'
 import './logIn.css'
 import { useState } from 'react'
-import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword} from 'firebase/auth'
+import { auth } from "../../lib/firebase";  // Import the auth instance
 
 
 const LogIn = () => {
@@ -22,7 +23,8 @@ const handleRegister = async (e) => {
   const {username, email, password} = Object.fromEntries(formData);
   console.log(username);
   try{
-    const user = await createUserWithEmailAndPassword(auth, email, password)  
+    const user = await createUserWithEmailAndPassword( auth, email, password);
+    console.log("User registered:", user); 
   }catch(err){
     console.log(err);
     toast.error(err.message);
