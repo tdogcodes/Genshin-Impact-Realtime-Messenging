@@ -34,5 +34,9 @@ body {
   padding: 50px;
   font-size: 36px;
   border-radius:10px;
-  background-color: hsla(263, 100%, 62%, 0.7);
+  background-color: hsla(226, 60%, 19%, 0.75);
+  backdrop-filter: blur(10px) saturate(100%);
+  border-radius: 20px;
+  border: 2px solid hsla(0, 0%, 100%, 0.125);
+  border-color: hsl(240, 13%, 45%);
 }

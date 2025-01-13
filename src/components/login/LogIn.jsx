@@ -8,6 +8,8 @@ import {
 import { auth, db } from "../../lib/firebase";
 import { doc, setDoc } from "firebase/firestore";
 import upload from "../../lib/upload";
+import { collection, query, where, getDocs } from "firebase/firestore";
+
 
 const LogIn = () => {
   const [avatar, setAvatar] = useState({
@@ -81,6 +83,8 @@ const LogIn = () => {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      useUserStore.getState().setCurrentUser(user);
+      toast.success("Account created!");
     } catch (err) {
       console.log(err);
       toast.error(err.message);
@@ -104,7 +108,7 @@ const LogIn = () => {
       <div className="separator"></div>
       <div className="item">
         <h2>Create an Account</h2>
-        <form onSubmit={handleRegister}>
+        <form onSubmit={handleRegister} autoComplete="on">
           <label htmlFor="file">
             <img src={avatar.url || "./avatar.png"} alt="" />
             Upload an image
