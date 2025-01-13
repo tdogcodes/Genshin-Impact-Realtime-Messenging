@@ -28,4 +28,3 @@ const upload = async (file) => {
 };
 
 export default upload;
-//separate from firebase.js to maintain simplicity

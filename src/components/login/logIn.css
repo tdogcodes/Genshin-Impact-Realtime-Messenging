@@ -1,9 +1,18 @@
-.logIn{
+.login{
     width: 100%;
-    height: 100%;
+    height: 120%;
     display: flex;
     align-items: center;
     gap: 10em;
+
+    .title{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        height: 90%;
+    }
 
     .item{
         flex: 1;
@@ -39,6 +48,7 @@
                 text-decoration: underline;
                 gap: 2em;
                 text-decoration: none;
+                margin-bottom: 10px;
             
 
                 img{
@@ -74,7 +84,7 @@
 
     .separator{
         width: 2px;
-        height: 60%;
+        height: 40%;
         background-color: hsl(240, 13%, 45%);
         margin: -20em;
     }
