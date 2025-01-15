@@ -83,7 +83,6 @@ const LogIn = () => {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      useUserStore.getState().setCurrentUser(user);
       toast.success("Account created!");
     } catch (err) {
       console.log(err);

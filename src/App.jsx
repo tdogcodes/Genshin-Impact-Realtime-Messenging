@@ -15,11 +15,7 @@ const App = () => {
 
   useEffect(() => {
     const unSub = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        fetchUserInfo(user?.uid);
-      } else {
-        fetchUserInfo(null);
-      }
+      fetchUserInfo(user?.uid);
     });
 
     return () => {
@@ -28,9 +24,6 @@ const App = () => {
   }, [fetchUserInfo]);
 
   if (isLoading) return <div className="loading">Loading...</div>;
-
-  console.log("Current User:", currentUser);  // Log currentUser
-  console.log("Chat ID:", chatId);            // Log chatId
 
   return (
     <div className="container">
@@ -41,7 +34,7 @@ const App = () => {
           {chatId && <Detail />}
         </>
       ) : (
-        <LogIn />
+        <Login />
       )}
       <Notification />
     </div>
