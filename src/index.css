@@ -8,7 +8,7 @@
 body {
   background-color: hsl(0, 0%, 0%);
   background: linear-gradient(
-  0deg, 
+  0deg,
   hsla(32, 100%, 50%, 0.7),
   hsla(324, 100%, 50%, 0.7),
   hsla(270, 100%, 40%, 0.7) 
@@ -34,7 +34,7 @@ body {
   padding: 50px;
   font-size: 36px;
   border-radius:10px;
-  background-color: hsla(226, 60%, 19%, 0.75);
+  background-color: hsla(226, 61%, 19%, 0.5);
   backdrop-filter: blur(10px) saturate(100%);
   border-radius: 20px;
   border: 2px solid hsla(0, 0%, 100%, 0.125);

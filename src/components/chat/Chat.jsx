@@ -30,8 +30,10 @@ const Chat = () => {
   const endRef = useRef(null);
 
   useEffect(() => {
+    if(chat?.messages){
     endRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [chat.messages]);
+  }
+  }, [chat?.messages]);
 
   useEffect(() => {
     const unSub = onSnapshot(doc(db, "chats", chatId), (res) => {
@@ -59,7 +61,6 @@ const Chat = () => {
 
   const handleSend = async () => {
     if (text === "") return;
-
     let imgUrl = null;
 
     try {
@@ -128,29 +129,33 @@ const Chat = () => {
         </div>
       </div>
       <div className="center">
-        {chat?.messages?.map((message) => (
-          <div
-            className={
-              message.senderId === currentUser?.id ? "message own" : "message"
-            }
-            key={message?.createAt}
-          >
-            <div className="texts">
-              {message.img && <img src={message.img} alt="" />}
-              <p>{message.text}</p>
-              <span>{format(message.createdAt.toDate())}</span>
+        {chat?.messages?.length > 0 ? (
+          chat.messages.map((message) => (
+            <div
+              className={
+                message.senderId === currentUser?.id ? "message own" : "message"
+              }
+              key={message?.createAt}
+            >
+              <div className="texts">
+                {message.img && <img src={message.img} alt="" />}
+                <p>{message.text}</p>
+                <span>{format(message.createdAt.toDate())}</span>
+              </div>
             </div>
-          </div>
-        ))}
-        {img.url && (
-          <div className="message own">
-            <div className="texts">
-              <img src={img.url} alt="" />
-            </div>
-          </div>
+          ))
+        ) : (
+          <p>No messages to display</p>
         )}
-        <div ref={endRef}></div>
+  {img.url && (
+    <div className="message own">
+      <div className="texts">
+        <img src={img.url} alt="" />
       </div>
+    </div>
+  )}
+  <div ref={endRef}></div>
+</div>
       <div className="bottom">
         <div className="icons">
           <label htmlFor="file">

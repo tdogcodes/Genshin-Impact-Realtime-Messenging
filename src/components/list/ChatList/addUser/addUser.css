@@ -2,7 +2,9 @@
     width: max-content;
     height: max-content;
     padding: 30px;
-    background-color: hsla(240, 61%, 14%, 0.849);
+    background-color: hsla(226, 61%, 19%, 0.5);
+    border: 2px solid hsla(0, 0%, 100%, 0.125);
+    border-color: hsl(240, 13%, 45%);
     border-radius: 15px;
     position: absolute;
     top: 0;
@@ -26,12 +28,12 @@
             border-radius: 10px;
             border: none;
             outline: none;
-            background-color: hsla(240, 100%, 33%, 0.7);
+            background-color: hsla(240, 62%, 14%, 0.411);
             color: white;
             cursor: pointer;
 
             &:hover{
-                background-color: hsl(240, 100%, 33%);
+                background-color: hsla(240, 62%, 14%, 0.7);
             }
         }
     }
@@ -64,13 +66,13 @@
             border-radius: 10px;
             border: none;
             outline: none;
-            background-color: hsla(240, 100%, 33%, 0.7);
+            background-color: hsla(240, 62%, 14%, 0.411);
             color: white;
             cursor: pointer;
             margin-top: 10px;
 
             &:hover{
-                background-color: hsl(240, 100%, 33%);
+                background-color: hsla(240, 62%, 14%, 0.7);
             }
         }
     }

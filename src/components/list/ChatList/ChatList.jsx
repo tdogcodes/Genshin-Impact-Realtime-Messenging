@@ -21,6 +21,7 @@ const ChatList = () => {
         const items = res.data().chats;
 
         const promises = items.map(async (item) => {
+          console.log(item.receiverId)
           const userDocRef = doc(db, "users", item.receiverId);
           const userDocSnap = await getDoc(userDocRef);
 
@@ -51,9 +52,8 @@ const ChatList = () => {
     );
 
     userChats[chatIndex].isSeen = true;
-
     const userChatsRef = doc(db, "userchats", currentUser.id);
-
+    console.log("Selected chatId:", chat.chatId);
     try {
       await updateDoc(userChatsRef, {
         chats: userChats,

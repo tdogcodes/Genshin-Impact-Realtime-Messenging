@@ -26,10 +26,14 @@
         img {
                 width: 40px;
                 height: 40px;
-                background-color: hsla(240, 61%, 14%, 0.411);
+                background-color: hsla(240, 61%, 14%, 0.4);
                 padding: 10px;
                 border-radius: 10px;
                 cursor: pointer;
+
+                &:hover{
+                    background-color: hsla(240, 61%, 14%, 0.7);
+                }
         }
     }
 }

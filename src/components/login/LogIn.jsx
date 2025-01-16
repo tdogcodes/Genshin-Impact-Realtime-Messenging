@@ -83,7 +83,6 @@ const LogIn = () => {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      toast.success("Account created!");
     } catch (err) {
       console.log(err);
       toast.error(err.message);
@@ -95,9 +94,9 @@ const LogIn = () => {
   return (
     <>
     <div className="login">
-    <h1 className="title">Genshin Impact CoOp Team Finder</h1>
+    <h1 className="title">Genshin Impact CoOp Chat</h1>
       <div className="item">
-        <h2>Welcome back</h2>
+      <h2>Welcome back</h2>
         <form onSubmit={handleLogin}>
           <input type="text" placeholder="Email" name="email" />
           <input type="password" placeholder="Password" name="password" />
@@ -107,7 +106,7 @@ const LogIn = () => {
       <div className="separator"></div>
       <div className="item">
         <h2>Create an Account</h2>
-        <form onSubmit={handleRegister} autoComplete="on">
+        <form onSubmit={handleRegister}>
           <label htmlFor="file">
             <img src={avatar.url || "./avatar.png"} alt="" />
             Upload an image
