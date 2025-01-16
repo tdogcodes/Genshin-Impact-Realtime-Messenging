@@ -28,12 +28,12 @@
             border-radius: 10px;
             border: none;
             outline: none;
-            background-color: hsla(240, 62%, 14%, 0.411);
+            background-color: hsla(240, 62%, 14%, 0.6);
             color: white;
             cursor: pointer;
 
             &:hover{
-                background-color: hsla(240, 62%, 14%, 0.7);
+                background-color: hsla(240, 62%, 14%, 0.8);
             }
         }
     }
