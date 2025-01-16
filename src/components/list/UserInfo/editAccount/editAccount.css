@@ -1,0 +1,55 @@
+.modal{
+    width: max-content;
+    height: max-content;
+    padding: 30px;
+    background-color: hsla(226, 61%, 19%, 0.7);
+    border: 2px solid hsla(0, 0%, 100%, 0.125);
+    border-color: hsl(240, 13%, 45%);
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    
+        textarea{
+            padding: 1em;
+            margin-bottom: 5px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+        }
+
+    .modal-actions{
+        display: flex;
+        gap: 5px;
+
+        button{
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                width: 60px;
+                height: 50px;
+                padding: 10px;
+                border-radius: 10px;
+                border: none;
+                cursor: pointer;
+                color: white;
+        }
+        .save{
+            background-color: hsl(240, 100%, 33%);
+
+            &:hover{
+                background-color: hsla(240, 100%, 33%, 0.699);
+            }
+        }
+        .close{
+            background-color: hsla(0, 70%, 53%, 0.801);
+
+            &:hover{
+                background-color: hsl(0, 70%, 53%);
+            }
+        }
+    }
+}

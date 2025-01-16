@@ -1,19 +1,20 @@
 import "./userInfo.css"
 import { useUserStore } from "../../../lib/userStore";
-import { getAuth, signOut} from "../../../lib/firebase"
+import { getAuth, signOut } from "../../../lib/firebase"
 import { toast } from "react-toastify";
+import React, { useState } from "react";
+import EditAccount from './editAccount/EditAccount';
 
 const Userinfo = () => {
 
   const auth = getAuth();
   const { currentUser } = useUserStore();
+  const [isEditing, setIsEditing] = useState(false);
 
   function handleSignOut() {
     signOut(auth)
       .then(() => {
         toast.success("You have been signed out.")
-        // Optional: Redirect to a login page or show a message
-
       })
       .catch((error) => {
         toast.error(`Error signing out:${error.message}`);
@@ -28,9 +29,16 @@ const Userinfo = () => {
       </div>
       <div className="icons">
         <img src="./more.png" alt="" />
-        <img src="./edit.png" alt="" />
+        <img src="./edit.png" alt="" onClick={()=>setIsEditing(true)}/>
         <img src="./signOut.png" alt="" onClick={handleSignOut}/>
       </div>
+        {isEditing && (
+        <EditAccount
+          userId={currentUser.id}
+          currentBio={currentUser.bio || ""}
+          onClose={() => setIsEditing(false)}
+        />
+      )}
     </div>
   )
 }
