@@ -34,6 +34,10 @@
                 &:hover{
                     background-color: hsla(240, 61%, 14%, 0.7);
                 }
+
+                &.logOut:hover{
+                    background-color: hsl(0, 100%, 70%);
+                }
         }
     }
 }
