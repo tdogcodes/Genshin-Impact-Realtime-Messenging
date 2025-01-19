@@ -31,6 +31,38 @@
                 font-weight: 600;
             }
 
+            img{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            label{
+                background-color: hsl(240, 100%, 33%);
+                color: white;
+                height: 30px;
+                width: 130px;
+                border-radius: 10px;
+                border: none;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                display: inline-block;
+                cursor: pointer;
+                text-align: center;
+                font-weight: 300;
+                font-size: .8rem;
+                padding-top: 5px;
+
+                &:hover{
+                    background-color: hsla(240, 100%, 33%, 0.699);
+                }
+
+                input[type="file"] {
+                    display: none;
+                    z-index: 2;
+                }
+            }
+
         .modal-actions{
             display: flex;
             justify-content: center;

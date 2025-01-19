@@ -36,7 +36,7 @@
                 }
 
                 p{
-                    font-size: 1rem;
+                    font-size: rem;
                     font-weight: 300;
                     color: hsl(0, 0%, 79%);
                 }
@@ -80,6 +80,8 @@
                        background-color: hsl(240, 100%, 33%); 
                        padding: 1em;
                        border-radius: 10px;
+                       font-size: 1rem;
+                       text-align: center;
                     }
                 }
             }
