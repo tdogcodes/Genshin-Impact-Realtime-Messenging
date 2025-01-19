@@ -12,44 +12,55 @@
     left: 0;
     bottom: 0;
     margin: auto;
-    
-        textarea{
-            padding: 1em;
-            margin-bottom: 5px;
-            border-radius: 10px;
-            border: none;
-            outline: none;
-        }
 
-    .modal-actions{
-        display: flex;
+    .modal-content{ 
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         gap: 5px;
+        font-weight: 600;
 
-        button{
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-                width: 60px;
-                height: 50px;
-                padding: 10px;
+            textarea{
+                padding: 1em;
+                margin-bottom: 5px;
                 border-radius: 10px;
                 border: none;
-                cursor: pointer;
-                color: white;
-        }
-        .save{
-            background-color: hsl(240, 100%, 33%);
+                outline: none;
+                font-size: 1rem;
+                font-weight: 600;
+            }
 
-            &:hover{
-                background-color: hsla(240, 100%, 33%, 0.699);
+        .modal-actions{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            button{
+                    gap: 10px;
+                    width: 60px;
+                    height: 50px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: none;
+                    cursor: pointer;
+                    color: white;
+            }
+            .save{
+                background-color: hsl(240, 100%, 33%);
+
+                &:hover{
+                    background-color: hsla(240, 100%, 33%, 0.699);
+                }
+            }
+            .close{
+                background-color: hsla(0, 70%, 53%, 0.801);
+
+                &:hover{
+                    background-color: hsl(0, 70%, 53%);
+                }
             }
         }
-        .close{
-            background-color: hsla(0, 70%, 53%, 0.801);
-
-            &:hover{
-                background-color: hsl(0, 70%, 53%);
-            }
-        }
-    }
+    }    
 }

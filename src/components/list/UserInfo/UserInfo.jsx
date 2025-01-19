@@ -29,14 +29,15 @@ const Userinfo = () => {
       </div>
       <div className="icons">
         <img src="./more.png" alt="" />
-        <img src="./edit.png" alt="" onClick={()=>setIsEditing(true)}/>
+        <img src={isEditing ? "./minus.png" : "./edit.png"} alt="" onClick={()=>setIsEditing(!isEditing)}/>
         <img src="./signOut.png" alt="" onClick={handleSignOut}/>
       </div>
         {isEditing && (
         <EditAccount
           userId={currentUser.id}
+          currentUsername={currentUser.username || ""}
           currentBio={currentUser.bio || ""}
-          onClose={() => setIsEditing(false)}
+          onClose={() => setIsEditing(!isEditing)}
         />
       )}
     </div>

@@ -6,12 +6,11 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 body {
-  background-color: hsl(0, 0%, 0%);
   background: linear-gradient(
   0deg,
-  hsla(32, 100%, 50%, 0.7),
-  hsla(324, 100%, 50%, 0.7),
-  hsla(270, 100%, 40%, 0.7) 
+  hsla(219, 100%, 66%, 0.8),
+  hsla(219, 100%, 66%, 0.6),
+  hsla(219, 100%, 66%, 0.8) 
 );
   display: flex;
   align-items: center;
