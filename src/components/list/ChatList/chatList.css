@@ -1,13 +1,13 @@
 .chatList{
-    flex: 1;
     overflow: scroll;
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none;  /* For Internet Explorer and Edge */
     .search {
         display: flex;
         align-items: center;
-        gap: 1em;
+        gap: 10px;
         padding: 2em;
+        flex-wrap: wrap;
 
         .searchBar{
             flex: 1;
@@ -29,7 +29,6 @@
             img{
                 width: 2em;
                 height: 2em;
-
             };
         }
         .add{
@@ -77,5 +76,5 @@
 }
 
 .chatList::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
+    display: none;
 }
