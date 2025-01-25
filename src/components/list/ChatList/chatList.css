@@ -5,18 +5,20 @@
     .search {
         display: flex;
         align-items: center;
-        gap: 10px;
-        padding: 2em;
-        flex-wrap: wrap;
+        gap: 1em;
+        padding: 1em;
 
         .searchBar{
-            flex: 1;
+            margin-top: -1em;
+            flex: 0;
+            height: 40px;
             background-color: hsla(240, 61%, 14%, 0.411);
             display: flex;
             align-items: center;
             gap: 20px;
             border-radius: 10px;
             padding: 10px;
+            max-width: 70%;
 
             input{
                 background-color: transparent;
@@ -27,17 +29,25 @@
             };
 
             img{
-                width: 2em;
-                height: 2em;
+                width: 1.5em;
+                height: 1.5em;
             };
         }
         .add{
-            width: 3em;
-            height: 3em;
+            margin-top: -1em;
+            width: 40px;
+            height: 40px;
             background-color: hsla(240, 62%, 14%, 0.4);
             padding: 10px;
             border-radius: 10px;
             cursor: pointer;
+
+           /* @media (max-width: 1495px) {
+                position: absolute;
+                z-index: 10;
+                margin-bottom:7em;
+              } */
+
         }
     }
     .item{

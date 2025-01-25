@@ -75,7 +75,6 @@ const ChatList = () => {
           <img src="./search.png" alt="" />
           <input
             type="text"
-            placeholder="Search"
             onChange={(e) => setInput(e.target.value)}
           />
         </div>

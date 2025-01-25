@@ -1,5 +1,6 @@
 .userInfo{
-    padding: 2em;
+    padding-top: 5px;
+    padding: 1em;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -9,6 +10,7 @@
     display: flex;
     align-items: center;
     gap: 2em;
+    margin-bottom: 10px;
 
         img{
         width: 5em;
@@ -24,7 +26,8 @@
     .icons{
         display: flex;
         gap: .5em;
-        margin-top: 10px;
+        margin-top: 0px;
+        flex-wrap: wrap;
         img {
                 width: 40px;
                 height: 40px;
