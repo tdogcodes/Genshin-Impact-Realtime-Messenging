@@ -1,5 +1,5 @@
 .chat{
-    flex: 2;
+    flex: 1.5;
     border-left: 1px solid hsl(240, 13%, 45%);
     border-right: 1px solid hsl(240, 13%, 45%);
     height: 100%;
@@ -150,8 +150,10 @@
             position: relative;
             .picker{
                 position: absolute;
-                bottom: 50px;
-                left: 0;
+                z-index: 1;
+                bottom: 500px;
+                right: 300px;
+                
             }
         }
 

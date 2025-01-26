@@ -186,7 +186,10 @@ const Chat = () => {
             onClick={() => setOpen((prev) => !prev)}
           />
           <div className="picker">
-            <EmojiPicker open={open} onEmojiClick={handleEmoji} />
+            <EmojiPicker open={open} onEmojiClick={handleEmoji} style={{
+              position: 'absolute',
+              zIndex: 1000,
+  }}/>
           </div>
         </div>
         <button
