@@ -134,7 +134,7 @@ const Chat = () => {
               className={
                 message.senderId === currentUser?.id ? "message own" : "message"
               }
-              key={message?.createAt}
+              key={message?.createdAt}
             >
               <div className="texts">
                 {message.img && <img src={message.img} alt="" />}
@@ -166,7 +166,6 @@ const Chat = () => {
             style={{ display: "none" }}
             onChange={handleImg}
           />
-          <img src="./mic.png" alt="" />
         </div>
         <input
           type="text"
@@ -195,8 +194,7 @@ const Chat = () => {
         <button
           className="sendButton"
           onClick={handleSend}
-          disabled={isCurrentUserBlocked || isReceiverBlocked}
-        >
+          disabled={isCurrentUserBlocked || isReceiverBlocked}>
           Send
         </button>
       </div>
