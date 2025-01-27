@@ -1,2 +1,2 @@
-Tdog's React Firebase Chat App!
-  An realtime messenger app with user authentication, video calling, a swipe algorithm.
+## Akasha Terminal
+  A realtime messenging app made with React and Firebase for Genshin Impact players
