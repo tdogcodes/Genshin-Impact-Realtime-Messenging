@@ -28,7 +28,6 @@ const Userinfo = () => {
         <h2>{currentUser.username}</h2>
       </div>
       <div className="icons">
-        <img src="./more.png" alt="" />
         <img src={isEditing ? "./minus.png" : "./edit.png"} alt="" onClick={()=>setIsEditing(!isEditing)}/>
         <img src="./signOut.png" alt="" onClick={handleSignOut} className="logOut"/>
       </div>

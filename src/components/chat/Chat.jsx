@@ -7,6 +7,7 @@ import {
   getDoc,
   onSnapshot,
   updateDoc,
+  arrayRemove
 } from "firebase/firestore";
 import { db } from "../../lib/firebase";
 import { useChatStore } from "../../lib/chatStore";
@@ -24,10 +25,25 @@ const Chat = () => {
   });
 
   const { currentUser } = useUserStore();
-  const { chatId, user, isCurrentUserBlocked, isReceiverBlocked } =
+  const { chatId, user, isCurrentUserBlocked, isReceiverBlocked, changeBlock, resetChat } =
     useChatStore();
 
   const endRef = useRef(null);
+
+  const handleBlock = async () => {
+    if (!user) return;
+
+    const userDocRef = doc(db, "users", currentUser.id);
+
+    try {
+      await updateDoc(userDocRef, {
+        blocked: isReceiverBlocked ? arrayRemove(user.id) : arrayUnion(user.id),
+      });
+      changeBlock();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   useEffect(() => {
     if(chat?.messages){
@@ -122,10 +138,15 @@ const Chat = () => {
             <p>{user?.bio || "No bio available"}</p>
           </div>
         </div>
-        <div className="icons">
-          <img src="./phone.png" alt="" />
-          <img src="./more.png" alt="" />
-        </div>
+        <button onClick={handleBlock} className="block">
+          {isCurrentUserBlocked
+            ? "You are Blocked!"
+            : isReceiverBlocked
+            ? "User blocked"
+            : "Block User"}
+          <img src="./block.png" 
+          alt=""/>
+        </button>
       </div>
       <div className="center">
         {chat?.messages?.length > 0 ? (
