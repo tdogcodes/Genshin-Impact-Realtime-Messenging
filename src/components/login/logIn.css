@@ -1,33 +1,55 @@
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 10em;
+    z-index: 50;
+
+    .title{
+        display: flex;
+        margin-top: 1em;
+        align-items: center;
+        justify-content: center;
+        @media screen and (max-width: 844px) {
+            padding-top:0.5em;
+            margin-top: 0;
+        }
+    }
+    
+    .logo{
+        width: 20%;
+        display: flex;
+        @media screen and (max-width: 844px) {
+            width: 70px;
+            padding-top:1.5em;
+        }
+    }
+
+    .subtitle{
+        margin-top: -3em;
+        margin-left: -10em;
+        @media screen and (max-width: 844px) {
+            display: none;
+        }
+    }
+    
+}
+
 .login{
     width: 100%;
     height: 120%;
     display: flex;
     align-items: center;
     gap: 5em;
-    overflow: hidden;
+    overflow-x: hidden;
 
-    .logo{
-        position: absolute;
-        height: 200px;
-        width: 200px;
-        top: 2%;
-        right: 28%;
-    }
-
-    .title{
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        width: 100%;
-        height: 80%;
-        font-size: 3rem;
-    }
-
-    .subtitle{
-        position: absolute;
-        top: 18%;
-        right: 43%;
+    @media screen and (max-width: 844px) {
+        gap:10em;
+        flex-direction: column;
+        gap: 0;
     }
 
     .item{
@@ -36,6 +58,14 @@
         flex-direction: column;
         align-items: center;
         gap: 2em;
+        overflow-x: clip;
+        @media screen and (max-width: 844px) {
+            flex: 0;
+            padding: 0;
+            gap: 0.5em;
+            margin-top: 120px;
+            margin-bottom: -70px;
+        }
 
         form{
             display: flex;
@@ -44,7 +74,6 @@
             justify-content: center;
             gap: 1em;
             z-index: 10;
-        
 
             input{
                 padding: 10px;
@@ -102,6 +131,10 @@
         width: 2px;
         height: 40%;
         background-color: hsl(240, 13%, 45%);
-        margin: -20em;
+        margin: -15em;
+        @media screen and (max-width: 844px) {
+            height: 0;
+            margin: 0;
+        }
     }
 }

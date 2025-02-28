@@ -93,10 +93,14 @@ const LogIn = () => {
 
   return (
     <>
+    <div className="header">
+        <div className="title">
+            <h1 className="title">Akasha Terminal</h1>
+            <img src="./akashaterminal.png" alt="logo" className="logo"/>
+        </div>
+        <span className="subtitle">Genshin Impact Realtime Chat</span>
+     </div>
     <div className="login">
-      <h1 className="title">Akasha Terminal</h1>
-      <img src="./akashaterminal.png" className="logo"/>
-    <span className="subtitle">Genshin Impact Realtime Chat</span>
       <div className="item">
       <h2>Welcome back</h2>
         <form onSubmit={handleLogin}>
