@@ -6,7 +6,7 @@ Features
 - Real-time Communication – Powered by Firebase for instant messaging.
 - State Management – Managed user and message data with Zustand.
 - Secure Authentication – Implemented Firebase Authentication.
-- 
+  
 Tech Stack -
 React, Firebase (Firestore & Auth), Zustand, CSS3
 
