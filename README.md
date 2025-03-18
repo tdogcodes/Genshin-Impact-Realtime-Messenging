@@ -15,5 +15,3 @@ Setup
 2. Install dependencies: npm install
 3. Configure Firebase credentials
 4. Run the app: npm start
-
-Or visit https://akasha-terminal.vercel.app
