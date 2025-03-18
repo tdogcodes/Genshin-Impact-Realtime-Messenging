@@ -7,7 +7,7 @@ Features
 - State Management – Managed user and message data with Zustand.
 - Secure Authentication – Implemented Firebase Authentication.
 - 
-Tech Stack
+Tech Stack -
 React, Firebase (Firestore & Auth), Zustand, CSS3
 
 Setup
