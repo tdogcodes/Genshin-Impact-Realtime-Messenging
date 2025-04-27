@@ -3,7 +3,7 @@ import { useChatStore } from '../lib/chatStore';
 import { describe, test, expect, beforeEach, vi } from 'vitest';
 import '@testing-library/jest-dom';
 
-// ✅ Correctly Mock Zustand’s useUserStore
+// Mock Zustand’s useUserStore
 vi.mock('../lib/userStore', async () => {
   return {
     useUserStore: vi.fn(() => ({
@@ -14,7 +14,7 @@ vi.mock('../lib/userStore', async () => {
   };
 });
 
-// Import AFTER mocking
+// Import userdata AFTER mocking
 import { useUserStore } from '../lib/userStore';
 
 beforeEach(() => {
