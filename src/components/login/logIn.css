@@ -1,8 +1,8 @@
 
 .header{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: absolute;
     width: 100%;
     z-index: 50;
@@ -11,8 +11,11 @@
         display: flex;
         margin-top: 1em;
         align-items: center;
+        background:  linear-gradient(to bottom, white 30%, rgba(228, 228, 228, 0.5) 99%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         justify-content: center;
-        font-size: 3rem;
+        font-size: 4rem;
         padding-bottom: 10px;
         @media screen and (max-width: 844px) {
             display: flex;
@@ -23,26 +26,21 @@
     }
     
     .logo{
-        width: 20%;
+        width: 15%;
+        padding-top: 1em;
         display: flex;
         @media screen and (max-width: 844px) {
             width: 70px;
             padding-top:0.5em;
         }
     }
-
-    .subtitle{
-        margin-top: -3em;
-        margin-left: -10em;
-        @media screen and (max-width: 844px) {
-            display: none;
-        }
-    }
     
 }
 
 h2{
-    color:whitesmoke
+    background:  linear-gradient(to bottom, white 10%, rgba(243, 243, 243, 0.5) 99%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
 
 .login{
@@ -85,11 +83,11 @@ h2{
 
             input{
                 padding: 10px;
-                border: none;
+                border: 1px solid hsl(0, 0%, 80%);
                 outline: none;
                 border-radius: 5px;
                 color: rgb(53, 53, 53);
-                background-color: whitesmoke;
+                background: linear-gradient(to right, white 10%, rgba(243, 243, 243, 0.5) 99%);
             }
 
             label{
@@ -139,7 +137,7 @@ h2{
     .separator{
         width: 2px;
         height: 40%;
-        background-color: hsla(0, 0%, 100%, 0.459);
+        background: linear-gradient(to right, white 1%, rgba(0, 0, 0, 0.5) 99%);
         margin: -15em;
         @media screen and (max-width: 844px) {
             height: 0;

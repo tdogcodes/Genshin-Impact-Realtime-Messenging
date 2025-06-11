@@ -94,12 +94,9 @@ const LogIn = () => {
   return (
     <>
     <div className="header">
-        <div className="title">
             <h1 className="title">WebChat Messenger</h1>
             <img src="./akashaterminal.png" alt="logo" className="logo"/>
-        </div>
-        <span className="subtitle">Chat privately with friends!</span>
-     </div>
+    </div>
     <div className="login">
       <div className="item">
       <h2>Welcome back</h2>
