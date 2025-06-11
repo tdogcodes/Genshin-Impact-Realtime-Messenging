@@ -120,7 +120,7 @@ h2{
                 outline: none;
                 border-radius: 5px;
                 color: rgb(53, 53, 53);
-                background: linear-gradient(to left, hsl(150, 55%, 47%) 30%, white 70%);
+                background: hsl(150, 55%, 47%);
                 cursor: pointer;
                 font-weight: 600;
                 transition: all 0.3s ease-in-out;
