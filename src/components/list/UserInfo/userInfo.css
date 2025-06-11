@@ -28,20 +28,23 @@
         gap: .5em;
         margin-top: 0px;
         flex-wrap: wrap;
+        transition: all 0.3s ease-in-out;
         img {
                 width: 40px;
                 height: 40px;
-                background-color: hsla(240, 61%, 14%, 0.4);
+                background: rgb(53, 53, 53);
                 padding: 10px;
                 border-radius: 10px;
-                cursor: pointer;
+                cursor: pointer; 
+                transition: all 0.3s ease-in-out;
 
                 &:hover{
-                    background-color: hsla(240, 61%, 14%, 0.7);
+                    opacity: 0.8;
                 }
 
                 &.logOut:hover{
                     background-color: hsl(0, 100%, 70%);
+                    scale: .95;
                 }
         }
     }

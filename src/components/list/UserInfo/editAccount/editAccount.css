@@ -2,9 +2,9 @@
     width: max-content;
     height: max-content;
     padding: 30px;
-    background-color: hsla(226, 61%, 19%, 0.7);
-    border: 2px solid hsla(0, 0%, 100%, 0.125);
-    border-color: hsl(240, 13%, 45%);
+    background-color: hsla(0, 0%, 17%, 0.75);
+    border: 1px solid hsla(0, 0%, 100%, 0.459);
+    backdrop-filter: blur(10px) saturate(100%);
     border-radius: 15px;
     position: absolute;
     top: 0;
@@ -38,8 +38,8 @@
                 object-fit: cover;
             }
             label{
-                background-color: hsl(240, 100%, 33%);
-                color: white;
+                background: linear-gradient(to left, hsl(150, 55%, 47%) 30%, white 70%);
+                color: rgb(53, 53, 53);
                 height: 30px;
                 width: 130px;
                 border-radius: 10px;
@@ -49,12 +49,12 @@
                 display: inline-block;
                 cursor: pointer;
                 text-align: center;
-                font-weight: 300;
+                font-weight: 600;
                 font-size: .8rem;
                 padding-top: 5px;
 
                 &:hover{
-                    background-color: hsla(240, 100%, 33%, 0.699);
+                   scale: 0.95;
                 }
 
                 input[type="file"] {
@@ -77,19 +77,23 @@
                     border-radius: 10px;
                     border: none;
                     cursor: pointer;
-                    color: white;
+                    color: whitesmoke;
+                    font-weight: 600;
+                    transition: all 0.3s ease-in-out;
             }
             .save{
-                background-color: hsl(240, 100%, 33%);
+                background-color: hsl(150, 55%, 47%);
+                color: rgb(53, 53, 53);
 
                 &:hover{
-                    background-color: hsla(240, 100%, 33%, 0.699);
+                    scale: 0.95;
                 }
             }
             .close{
                 background-color: hsla(0, 70%, 53%, 0.801);
 
                 &:hover{
+                    scale: 0.95;
                     background-color: hsl(0, 70%, 53%);
                 }
             }

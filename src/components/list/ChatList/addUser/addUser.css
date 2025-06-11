@@ -2,9 +2,8 @@
     width: max-content;
     height: max-content;
     padding: 30px;
-    background-color: hsla(226, 61%, 19%, 0.8);
-    border: 2px solid hsla(0, 0%, 100%, 0.125);
-    border-color: hsl(240, 13%, 45%);
+    background-color: hsla(0, 0%, 17%, 0.75);
+    border: 1px solid hsla(0, 0%, 100%, 0.459);
     border-radius: 15px;
     position: absolute;
     top: 0;
@@ -28,12 +27,14 @@
             border-radius: 10px;
             border: none;
             outline: none;
-            background-color: hsla(240, 62%, 14%, 0.6);
-            color: white;
+            background: linear-gradient(to left, hsl(150, 55%, 47%) 30%, white 70%);
+            color: rgb(53, 53, 53);
             cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            font-weight: 600;;
 
             &:hover{
-                background-color: hsla(240, 62%, 14%, 0.8);
+                scale: 0.95;
             }
         }
     }
@@ -66,13 +67,15 @@
             border-radius: 10px;
             border: none;
             outline: none;
-            background-color: hsla(240, 62%, 14%, 0.411);
-            color: white;
+            background: linear-gradient(to left, hsl(150, 55%, 47%) 30%, white 70%);
+            color: rgb(53, 53, 53);
             cursor: pointer;
             margin-top: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
 
             &:hover{
-                background-color: hsla(240, 62%, 14%, 0.7);
+                scale: 0.95;
             }
         }
     }

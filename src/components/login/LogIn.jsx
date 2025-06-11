@@ -95,10 +95,10 @@ const LogIn = () => {
     <>
     <div className="header">
         <div className="title">
-            <h1 className="title">Akasha Terminal</h1>
+            <h1 className="title">WebChat Messenger</h1>
             <img src="./akashaterminal.png" alt="logo" className="logo"/>
         </div>
-        <span className="subtitle">Genshin Impact Realtime Chat</span>
+        <span className="subtitle">Chat privately with friends!</span>
      </div>
     <div className="login">
       <div className="item">

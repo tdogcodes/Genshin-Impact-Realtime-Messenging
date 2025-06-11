@@ -42,7 +42,7 @@
 }
 
 h2{
-    color:lightgray
+    color:whitesmoke
 }
 
 .login{
@@ -88,8 +88,8 @@ h2{
                 border: none;
                 outline: none;
                 border-radius: 5px;
-                color: white;
-                background-color: hsla(240, 61%, 14%, 0.411);
+                color: rgb(53, 53, 53);
+                background-color: whitesmoke;
             }
 
             label{
@@ -119,18 +119,18 @@ h2{
                 border: none;
                 outline: none;
                 border-radius: 5px;
-                color: white;
-                background-color: hsla(240, 61%, 14%, 0.712);
+                color: rgb(53, 53, 53);
+                background: linear-gradient(to left, hsl(150, 55%, 47%) 30%, white 70%);
                 cursor: pointer;
                 font-weight: 600;
+                transition: all 0.3s ease-in-out;
 
                 &:disabled{
                     cursor: not-allowed;
-                    background-color: hsla(240, 61%, 14%, 0.5);
                 }
 
                 &:hover{
-                    background-color: hsl(240, 61%, 14%);
+                    scale: 0.95;
                 }
             }
         }
@@ -139,7 +139,7 @@ h2{
     .separator{
         width: 2px;
         height: 40%;
-        background-color: hsl(240, 13%, 45%);
+        background-color: hsla(0, 0%, 100%, 0.459);
         margin: -15em;
         @media screen and (max-width: 844px) {
             height: 0;

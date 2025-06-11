@@ -40,39 +40,41 @@ const AddUser = () => {
     }
   };
 
-  const handleAdd = async () => {
-    const chatRef = collection(db, "chats");
-    const userChatsRef = collection(db, "userchats");
+const handleAdd = async () => {
+  const chatRef = collection(db, "chats");
+  const userChatsRef = collection(db, "userchats");
 
-    try {
-      const newChatRef = doc(chatRef);
+  try {
+    const newChatRef = doc(chatRef);
 
-      await setDoc(newChatRef, {
-        createdAt: serverTimestamp(),
-        messages: [],
-      });
+    await setDoc(newChatRef, {
+      createdAt: serverTimestamp(),
+      messages: [],
+    });
 
-      await updateDoc(doc(userChatsRef, user.id), {
-        chats: arrayUnion({
-          chatId: newChatRef.id,
-          lastMessage: "",
-          receiverId: currentUser.id,
-          updatedAt: Date.now(),
-        }),
-      });
-      await updateDoc(doc(userChatsRef, currentUser.id), {
-        chats: arrayUnion({
-          chatId: newChatRef.id,
-          lastMessage: "",
-          receiverId: user.id,
-          updatedAt: Date.now(),
-        }),
-      });
-    } catch (err) {
-      console.log(err);
-    }
-    console.log("Current Chat ID:", chatId);
-  };
+    await setDoc(doc(userChatsRef, user.id), {
+      chats: arrayUnion({
+        chatId: newChatRef.id,
+        lastMessage: "",
+        receiverId: currentUser.id,
+        updatedAt: Date.now(),
+      }),
+    }, { merge: true });
+
+    await setDoc(doc(userChatsRef, currentUser.id), {
+      chats: arrayUnion({
+        chatId: newChatRef.id,
+        lastMessage: "",
+        receiverId: user.id,
+        updatedAt: Date.now(),
+      }),
+    }, { merge: true });
+
+    console.log("Current Chat ID:", newChatRef.id);
+  } catch (err) {
+    console.error("Error adding user and chat:", err);
+  }
+};
 
   return (
     <div className="addUser">

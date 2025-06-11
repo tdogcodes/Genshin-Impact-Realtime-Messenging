@@ -46,16 +46,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
             gap: 1em;
             color: white;
-            background-color: hsla(0, 100%, 68%, 0.63);
+            background: hsla(0, 100%, 68%);
+            font-weight: 600;
             border: none;
             padding: 10px;
             border-radius: 15px;
             z-index: 10;
+            transition: all 0.3s ease-in-out;
 
             &:hover{
-                background-color: hsla(0, 100%, 68%);
+                opacity: 0.8;
             }
 
             img{
@@ -88,11 +91,10 @@
                 
                 .texts{
                     p{
-                       background-color: hsl(240, 100%, 33%); 
+                       background: linear-gradient(to left, hsl(150, 55%, 47%) 30%, white 70%);
+                       color: rgb(53, 53, 53); 
                        padding: 1em;
                        border-radius: 10px;
-                       font-size: 1rem;
-                       text-align: center;
                     }
                 }
             }
@@ -119,8 +121,9 @@
                 }
                 p{
                     padding: 1em;
-                    background-color: hsl(261, 100%, 30%);
                     border-radius: 10px;
+                    background: linear-gradient(to left, hsl(150, 55%, 47%) 30%, white 70%);
+                    color: rgb(53, 53, 53); 
                 }
                 span{
                     font-size: .8rem;
@@ -150,7 +153,7 @@
 
         input{
             flex: 1;
-            background-color: hsla(240, 61%, 14%, 0.411);
+            background-color: hsla(0, 0%, 17%, 0.75);
             border: none;
             outline: none;
             color: white;
@@ -172,11 +175,14 @@
             padding: 1em;
             border-radius: 10px;
             color:white;
-            background-color: hsl(240, 100%, 33%);
+            background: linear-gradient(to left, hsl(150, 55%, 47%) 30%, white 70%);
+            font-weight: 600;
+            color: rgb(53, 53, 53);
             border: none;
             cursor: pointer;
+            transition: all 0.3s ease-in-out;
              &:hover{
-                background-color: hsl(240, 100%, 40%);
+                scale: 0.95;
              }
         }
     }
