@@ -91,8 +91,8 @@
                 
                 .texts{
                     p{
-                       background: linear-gradient(to left, hsl(150, 55%, 47%) 30%, white 70%);
-                       color: rgb(53, 53, 53); 
+                       background: hsl(150, 55%, 47%);
+                       color: rgb(0, 0, 0); 
                        padding: 1em;
                        border-radius: 10px;
                     }
@@ -122,8 +122,8 @@
                 p{
                     padding: 1em;
                     border-radius: 10px;
-                    background: linear-gradient(to left, hsl(150, 55%, 47%) 30%, white 70%);
-                    color: rgb(53, 53, 53); 
+                    background: hsl(167, 55%, 47%);
+                    color: rgb(0, 0, 0); 
                 }
                 span{
                     font-size: .8rem;
