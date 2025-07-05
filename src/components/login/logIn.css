@@ -120,6 +120,7 @@ h2{
                 background: hsl(150, 55%, 47%);
                 cursor: pointer;
                 font-weight: 600;
+                font-size: 1rem;;
                 transition: all 0.3s ease-in-out;
 
                 &:disabled{
